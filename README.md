@@ -4,6 +4,7 @@ Este proyecto consiste en el desarrollo de un algoritmo para calcular el volumen
 
 ## Integrantes
 **Nombre:** Bueno, Santiago - **Carnet:** 20-10168
+
 **Nombre:** Toufic, Zahir - **Carnet:** 21-10600  
 
 ---
@@ -20,7 +21,7 @@ La solución implementada en `AlfonsoJose.kt` utiliza un enfoque basado en el **
 1.  **Cola de Prioridad (Min-Heap):** Se utiliza una `PriorityQueue` para almacenar las celdas del borde de la ciudad. La cola prioriza las celdas con la menor altura, ya que el agua siempre se desbordará por el punto más bajo del "recipiente" que la contiene.
 2.  **Procesamiento de Celdas:** * Se marcan todas las celdas del borde como visitadas y se añaden a la cola.
     * Mientras la cola no esté vacía, se extrae la celda con la altura mínima actual ($h$).
-    * Se exploran sus vecinos adyacentes. Si un vecino tiene una altura menor que $h$, la diferencia ($h - \text{altura\_vecino}$) representa el agua atrapada en esa celda.
+    * Se exploran sus vecinos adyacentes. Si un vecino tiene una altura menor que $h$, la diferencia ($h - \text{altura_vecino}$) representa el agua atrapada en esa celda.
     * La "altura efectiva" del vecino se actualiza al máximo entre su altura original y la altura de la celda desde la que se accedió, para asegurar que el nivel del agua se mantenga consistente.
 3.  **Complejidad:** La complejidad temporal es $O(N \cdot M \log(N \cdot M))$, donde $N \cdot M$ es el número total de celdas en la matriz.
 
